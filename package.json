@@ -1,0 +1,20 @@
+{
+  "name": "dwe-cliente-2-daw",
+  "version": "1.0.0",
+  "description": "Repositorio con actividades y proyectos de la asignatura 'Desarrollo web en Entorno Cliente' del modulo superior 'Desesarrllo de Aplicaciones Web (DAW'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andreu-08/DWE-CLIENTE-2-DAW.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andreu-08/DWE-CLIENTE-2-DAW/issues"
+  },
+  "homepage": "https://github.com/Andreu-08/DWE-CLIENTE-2-DAW#readme"
+}

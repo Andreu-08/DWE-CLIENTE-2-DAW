@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 2 - Lista de Videojuegos</title>
+  <script src="script2.js" defer></script>
+</head>
+<body>
+  <h1>VIDEOJUEGOS</h1>
+
+  <!-- Lista de categorías de videojuegos -->
+  <ul id="listaVideojuegos">
+    <li>Sandbox</li>
+    <li>Deportes</li>
+    <li>RPG</li>
+  </ul>
+
+  <!-- Botones para manipular la lista -->
+  <button onclick="anadirElemento()">Añadir nuevo elemento</button>
+  <button onclick="insertarElemento()">Insertar nuevo elemento</button>
+  <button onclick="reemplazarElemento()">Reemplazar elemento</button>
+  <button onclick="borrarElemento()">Borrar elemento</button>
+  <button onclick="clonarLista()">Clonar la lista completa</button>
+  <button onclick="crearSublistaConDOM()">Crear sublista dentro de Sandbox con funciones DOM</button>
+  <button onclick="crearSublistaConInnerHTML()">Crear sublista dentro de Sandbox con innerHTML</button>
+</body>
+</html>

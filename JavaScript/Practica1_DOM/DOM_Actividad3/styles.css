@@ -1,0 +1,10 @@
+.contenedor {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: black;
+    background-color: white; /* Fondo inicial en blanco */
+    font-size: 18px;
+    font-weight: bold;
+  }
+  

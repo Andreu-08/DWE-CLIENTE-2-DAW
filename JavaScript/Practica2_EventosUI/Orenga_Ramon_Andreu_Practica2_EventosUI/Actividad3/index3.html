@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Control Deslizante</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script3.js" defer></script>
+  <style>
+    .slider {
+        width: 310px;
+        height: 15px;
+        background: #E0E0E0;
+        border-radius: 5px;
+        margin: 50px;
+        position: relative;
+      }
+      
+      .thumb {
+        width: 10px;
+        height: 25px;
+        background: blue;
+        border-radius: 3px;
+        position: absolute;
+        cursor: pointer;
+        top: -5px; /* Centra el pasador en la barra */
+        left: 0;
+      }
+  </style>
+</head>
+<body>
+  <div id="slider" class="slider">
+    <div class="thumb"></div>
+  </div>
+</body>
+</html>

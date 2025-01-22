@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T3Actividad2</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Generador de Presupuesto de PC</h2>
+        <form id="presupuestoForm">
+            <!-- Categoría de Procesador -->
+            <div class="category">
+                <h3>Selecciona el procesador</h3>
+                <input type="checkbox" name="procesador" value="380"> Intel i7 11700k - 380€<br>
+                <input type="checkbox" name="procesador" value="400"> AMD Ryzen 7 5800x - 400€<br>
+                <input type="checkbox" name="procesador" value="200"> ARM - 200€<br>
+            </div>
+            <!-- Categoría de Caja -->
+            <div class="category">
+                <h3>Selecciona la caja</h3>
+                <input type="checkbox" name="caja" value="50"> Caja ATX - 50€<br>
+                <input type="checkbox" name="caja" value="80"> Caja Micro-ATX - 80€<br>
+                <input type="checkbox" name="caja" value="100"> Caja Mini-ITX - 100€<br>
+            </div>
+            <!-- Categoría de Refrigeración -->
+            <div class="category">
+                <h3>Selecciona la refrigeración</h3>
+                <input type="checkbox" name="refrigeracion" value="60"> Refrigeración por aire - 60€<br>
+                <input type="checkbox" name="refrigeracion" value="100"> Refrigeración líquida - 100€<br>
+                <input type="checkbox" name="refrigeracion" value="150"> Refrigeración avanzada - 150€<br>
+            </div>
+            <!-- Categoría de Monitor -->
+            <div class="category">
+                <h3>Selecciona el monitor</h3>
+                <input type="checkbox" name="monitor" value="150"> Monitor 24" - 150€<br>
+                <input type="checkbox" name="monitor" value="250"> Monitor 27" - 250€<br>
+                <input type="checkbox" name="monitor" value="400"> Monitor ultrapanorámico - 400€<br>
+            </div>
+            <!-- Categoría de Gráfica -->
+            <div class="category">
+                <h3>Selecciona la gráfica</h3>
+                <input type="checkbox" name="grafica" value="300"> Gráfica GTX 1650 - 300€<br>
+                <input type="checkbox" name="grafica" value="500"> Gráfica RTX 3060 - 500€<br>
+                <input type="checkbox" name="grafica" value="800"> Gráfica RTX 3080 - 800€<br>
+            </div>
+            <button type="button" onclick="calcularPresupuesto()">Calcular Presupuesto</button>
+        </form>
+
+        <!-- Tabla para mostrar el presupuesto -->
+        <div id="resultado"></div>
+    </div>
+    <script src="T3Actividad2.js"></script>
+</body>
+</html>

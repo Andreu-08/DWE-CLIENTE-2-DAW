@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 4 - Manipulación de Enlaces</title>
+  <script src="script4.js" defer></script>
+</head>
+<body>
+  <h1>Document con Enlaces</h1>
+
+  <!-- Párrafos con enlaces -->
+  <p id="parrafo1">
+    Este es el primer párrafo con un <a href="https://www.ejemplo1.com">enlace 1</a>.
+  </p>
+  <p id="parrafo2">
+    Este es el segundo párrafo con dos enlaces:
+    <a href="https://www.ejemplo2.com">enlace 2</a> y
+    <a href="https://www.ejemplo3.com">enlace 3</a>.
+  </p>
+  <p id="parrafo3">
+    Este es el tercer párrafo con tres enlaces:
+    <a href="https://www.ejemplo4.com">enlace 4</a>,
+    <a href="https://www.ejemplo5.com">enlace 5</a> y
+    <a href="https://www.ejemplo6.com">enlace 6</a>.
+  </p>
+
+  <!-- Botones para realizar las acciones -->
+  <button onclick="mostrarNumeroEnlaces()">Número de enlaces</button>
+  <button onclick="mostrarReferenciasEnlaces()">Referencia enlaces</button>
+  <button onclick="mostrarReferenciasPorParrafo()">Referencia enlaces por párrafo</button>
+
+  <!-- Div para mostrar los resultados -->
+  <div id="resultado"></div>
+</body>
+</html>

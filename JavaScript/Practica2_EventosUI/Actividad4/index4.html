@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Arrastrar Objetos</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script4.js" defer></script>
+  <style>
+    .field {
+        background: url(field.svg);
+        width: 800px;
+        height: 500px;
+        border: 1px solid #333;
+        position: relative;
+      }
+      
+      .hero {
+        width: 130px;
+        height: 128px;
+        background: url(https://js.cx/drag-heroes/heroes.png);
+        position: absolute;
+        cursor: pointer;
+      }
+      
+      .draggable {
+        cursor: pointer;
+      }
+  </style>
+</head>
+<body>
+  <h2>Ubica los superhéroes en el campo</h2>
+  <div id="field" class="field"></div>
+  <div class="hero draggable" id="hero1"></div>
+  <div class="hero draggable" id="hero2"></div>
+  <img src="https://en.js.cx/clipart/ball.svg" class="draggable" alt="Pelota">
+</body>
+</html>

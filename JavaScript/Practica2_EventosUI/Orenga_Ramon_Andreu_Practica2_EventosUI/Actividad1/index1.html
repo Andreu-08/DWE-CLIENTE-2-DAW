@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Eventos en Botones</title>
+  <script src="script1.js" defer></script>
+</head>
+<body>
+  <button id="botonMagico" onclick="ocultarBoton()">Objeto mágico</button>
+  <button onclick="mostrarMensaje()">Pulsador</button>
+
+  <!-- Botón y lista deslizante para "Películas" -->
+  <button onclick="togglePeliculas()">Películas</button>
+  <ul id="listaPeliculas" style="display: none;">
+    <li>Inception</li>
+    <li>Matrix</li>
+    <li>Interstellar</li>
+  </ul>
+
+  <!-- Botón y lista deslizante para "Series" -->
+  <button onclick="toggleSeries()">Series</button>
+  <ul id="listaSeries" style="display: none;">
+    <li>Breaking Bad</li>
+    <li>Stranger Things</li>
+    <li>The Witcher</li>
+  </ul>
+</body>
+</html>
