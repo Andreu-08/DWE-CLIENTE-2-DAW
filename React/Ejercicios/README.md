@@ -1,8 +1,40 @@
-# React + Vite
+# Ejercicios React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <img src="./src/assets/react.png" alt="React Logo" width="200"/>
+</p>
 
-Currently, two official plugins are available:
+Este repositorio contiene una colección de ejercicios realizados en React para la asignatura de Desarrollo Web en Entorno Cliente del módulo de DAW.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📝 Ejercicios
+
+### 1. [Hola Mundo](./src/ejercicios/e1-hola-mundo.jsx)
+Primer ejercicio en React donde mostramos el clásico "Hola Mundo" en pantalla.
+
+### 2. [Contador](./src/ejercicios/e2-contador.jsx)
+Implementación de un contador simple con botones para incrementar y decrementar el valor.
+
+### 3. [Saludo con Props](./src/ejercicios/e3-saludo-props.jsx)
+Ejemplo de paso de propiedades entre componentes mediante un saludo personalizado.
+
+### 4. [Botón con Evento](./src/ejercicios/e4-boton-evento.jsx)
+Manejo de eventos en React mediante un botón interactivo.
+
+### 5. [Perfil](./src/ejercicios/e5-perfil.jsx)
+Creación de un componente de perfil con información personal.
+
+### 6. [Lista de Compra](./src/ejercicios/e6-lista-compra.jsx)
+Implementación de una lista de compra interactiva.
+
+## 🚀 Instalación
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/tuusuario/ejercicios-react.git
+
+# Instalar dependencias
+cd Ejercicios
+npm install
+
+# Iniciar el servidor de desarrollo
+npm run dev
