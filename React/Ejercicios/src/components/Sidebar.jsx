@@ -18,7 +18,7 @@ const Sidebar = () => {
 
   return (
     <nav style={{ 
-      width: "150px", // Reducido de 250px
+      width: "250px", // Reducido de 250px
       padding: "15px", // Reducido de 20px
       backgroundColor: "#f0f0f0", 
       borderRight: "1px solid #ddd",
@@ -107,6 +107,8 @@ const Sidebar = () => {
           }>
             7.Galeria
           </NavLink>
+        </li>
+        <li>
           <NavLink to="/e8" style={({ isActive }) => 
             isActive ? activeLinkStyle : linkStyle
           }>

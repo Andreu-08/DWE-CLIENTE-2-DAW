@@ -1,28 +1,70 @@
-.BarraHerramientas{
-    background-color: grey;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
 }
 
-button{
-    background-color: #f0f0f0; 
-    color: grey;
-    border: 1px solid grey;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+.BarraHerramientas {
+  background-color: grey;
 }
-input{
-    background-color: #f0f0f0; 
-    color: grey;
-    border: 1px solid grey;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+
+button {
+  background-color: #ffffff;
+  color: #333333;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 8px 4px;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #f5f5f5;
+  border-color: #cccccc;
+}
+
+button:active {
+  background-color: #e0e0e0;
+  transform: translateY(1px);
+}
+
+button:disabled {
+  background-color: #f0f0f0;
+  color: #999999;
+  cursor: not-allowed;
+  border-color: #e0e0e0;
+}
+
+input {
+  background-color: #ffffff;
+  color: #333333;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 14px;
+  margin: 8px 4px;
+  transition: all 0.3s ease;
+  width: 200px;
+  outline: none;
+}
+
+input:hover {
+  border-color: #cccccc;
+}
+
+input:focus {
+  border-color: #808080;
+  box-shadow: 0 0 0 2px rgba(128, 128, 128, 0.1);
+}
+
+input::placeholder {
+  color: #999999;
+  font-weight: 300;
 }
