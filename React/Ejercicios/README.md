@@ -26,6 +26,12 @@ Creación de un componente de perfil con información personal.
 ### 6. [Lista de Compra](./src/ejercicios/e6-lista-compra.jsx)
 Implementación de una lista de compra interactiva.
 
+### 7. [Galería](./src/ejercicios/e7-Galeria/e7-Galeria.jsx)
+Implementación de una galería de imágenes interactiva.
+
+### 8. [Inputs](./src/ejercicios/e8-inputs.jsx)
+Manejo de inputs controlados en formularios React.
+
 ## 🚀 Instalación
 
 ```bash

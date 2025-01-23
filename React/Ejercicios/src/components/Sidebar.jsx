@@ -20,7 +20,7 @@ const Sidebar = () => {
     <nav style={{ 
       width: "150px", // Reducido de 250px
       padding: "15px", // Reducido de 20px
-      backgroundColor: "#f0f0f0",
+      backgroundColor: "#f0f0f0", 
       borderRight: "1px solid #ddd",
       height: "100%"
     }}>
@@ -99,6 +99,18 @@ const Sidebar = () => {
             isActive ? activeLinkStyle : linkStyle
           }>
             6. Lista-Compra
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/e7" style={({ isActive }) => 
+            isActive ? activeLinkStyle : linkStyle
+          }>
+            7.Galeria
+          </NavLink>
+          <NavLink to="/e8" style={({ isActive }) => 
+            isActive ? activeLinkStyle : linkStyle
+          }>
+            8.!Inputs
           </NavLink>
         </li>
       </ul>

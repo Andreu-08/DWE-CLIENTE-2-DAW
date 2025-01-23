@@ -8,7 +8,9 @@ import E3SaludoProps from "./ejercicios/e3-saludo-props";
 import E4BotonEvento from "./ejercicios/e4-boton-evento";
 import E5Perfil from "./ejercicios/e5-perfil";
 import E6ListaCompra from "./ejercicios/e6-lista-compra";
-
+import E7Galeria from "./ejercicios/e7-Galeria/e7-Galeria";
+import E8Inputs from "./ejercicios/e8-inputs";
+import "./App.css";
 const App = () => {
   return (
     <Router>
@@ -21,6 +23,8 @@ const App = () => {
           <Route path="e4" element={<E4BotonEvento />} />
           <Route path="e5" element={<E5Perfil />} />
           <Route path="e6" element={<E6ListaCompra />} />
+          <Route path="e7" element={<E7Galeria />} />
+          <Route path="e8" element={<E8Inputs />} />
         </Route>
       </Routes>
     </Router>
