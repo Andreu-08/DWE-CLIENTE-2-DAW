@@ -35,7 +35,7 @@ Repositorio con actividades y proyectos de la asignatura 'Desarrollo web en Ento
 <img src="https://vabadus.es/images/articulos/642b0d6e32096626294760.png" width="800">
 
 ### Ejercicios Básicos
-- [Ejercicios React](React/Ejercicios)
+- [Ejercicios React](React/Ejercicios/src/ejercicios/)
   - Fundamentos de React
   - Componentes y Props
   - Estado y eventos
