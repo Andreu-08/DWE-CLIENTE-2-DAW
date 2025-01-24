@@ -21,12 +21,12 @@ Juego clásico de Tres en Raya desarrollado con React y Vite. Implementa un sist
 
 ### **Componentes**
 
-| Archivo | Descripción |
-| --- | --- |
-| `App.jsx` | Componente principal que estructura la aplicación |[Ver código](./src/App.jsx) |
-| `Game.jsx` | Gestiona la lógica del juego y estados |[Ver código](./src/Game.jsx) |
-| `Board.jsx` | Renderiza el tablero y gestiona las jugadas |[Ver código](./src/components/board.jsx) |
-| `Square.jsx` | Componente para cada casilla del tablero |[Ver código](./src/components/square.jsx) |
+| Archivo | Descripción | Codigo
+| --- | --- | --- |
+| `App.jsx` | Componente principal que estructura la aplicación | [Ver código](./src/App.jsx) |
+| `Game.jsx` | Gestiona la lógica del juego y estados | [Ver código](./src/Game.jsx) |
+| `Board.jsx` | Renderiza el tablero y gestiona las jugadas | [Ver código](./src/components/board.jsx) |
+| `Square.jsx` | Componente para cada casilla del tablero | [Ver código](./src/components/square.jsx) |
 
 ### **Estilos**
 
@@ -37,7 +37,7 @@ Juego clásico de Tres en Raya desarrollado con React y Vite. Implementa un sist
 - Diseño responsive
 - Variables CSS personalizadas
 
-[Ver código](./src/App.css) |
+[Ver código](./src/App.css) 
 
 ## **📱 Vista Previa**
 

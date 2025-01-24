@@ -31,8 +31,7 @@ Repositorio con actividades y proyectos de la asignatura 'Desarrollo web en Ento
   - Manejo de promesas
   - Async/Await
 
-## React 
-<img src="https://vabadus.es/images/articulos/642b0d6e32096626294760.png" width="800">
+## React <img src="img/react.png" width="30">
 
 ### Ejercicios Básicos
 - [Ejercicios React](React/Ejercicios/src/ejercicios/)
@@ -41,3 +40,10 @@ Repositorio con actividades y proyectos de la asignatura 'Desarrollo web en Ento
   - Estado y eventos
   - Rutas y navegación
   - [Ver README detallado](React/Ejercicios/README.md)
+
+### Proyectos
+- [Tres en Raya](React/Proyectos/tresEnRalla)
+  - Juego clásico de Tres en Raya
+  - Implementado con React Hooks
+  - Gestión de estado del juego
+  - Detección de victoria
