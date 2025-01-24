@@ -43,7 +43,7 @@ Repositorio con actividades y proyectos de la asignatura 'Desarrollo web en Ento
   - [Ver README detallado](React/Ejercicios/README.md)
 
 ### Proyectos
-- [Tres en Raya](React/Proyectos/tresEnRaya)
+- [Tres en Raya](React/Proyectos/tresEnRalla)
   - Juego clásico de Tres en Raya
   - Implementado con React Hooks
   - Gestión de estado del juego
