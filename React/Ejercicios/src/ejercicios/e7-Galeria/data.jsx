@@ -70,4 +70,4 @@ export const sculptureList = [{
     description: 'El ZoolÃ³gico de Taipei encargÃ³ una Plaza del HipopÃ³tamo con hipopÃ³tamos sumergidos jugando.',
     url: 'https://i.imgur.com/6o5Vuyu.jpg',
     alt: 'Un grupo de esculturas de hipopÃ³tamos de bronce que emergen de la acera como si estuvieran nadando.'
-  }];
+}];
