@@ -10,7 +10,12 @@ import E5Perfil from "./ejercicios/e5-perfil";
 import E6ListaCompra from "./ejercicios/e6-lista-compra";
 import E7Galeria from "./ejercicios/e7-Galeria/e7-Galeria";
 import E8Inputs from "./ejercicios/e8-inputs";
+import E9Puntuaciones from "./ejercicios/e9-puntaje";
+import E10Cuestionario from "./ejercicios/e10-cuestionario";
+import E11Notas from "./ejercicios/e11-notas/e11-notas";
 import "./App.css";
+
+
 const App = () => {
   return (
     <Router>
@@ -25,6 +30,9 @@ const App = () => {
           <Route path="e6" element={<E6ListaCompra />} />
           <Route path="e7" element={<E7Galeria />} />
           <Route path="e8" element={<E8Inputs />} />
+          <Route path="e9" element={<E9Puntuaciones />} />
+          <Route path="e10" element={<E10Cuestionario />} />
+          <Route path="e11" element={<E11Notas />} />
         </Route>
       </Routes>
     </Router>

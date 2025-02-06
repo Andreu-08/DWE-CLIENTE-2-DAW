@@ -105,14 +105,35 @@ const Sidebar = () => {
           <NavLink to="/e7" style={({ isActive }) => 
             isActive ? activeLinkStyle : linkStyle
           }>
-            7.Galeria
+            7. Galeria
           </NavLink>
         </li>
         <li>
           <NavLink to="/e8" style={({ isActive }) => 
             isActive ? activeLinkStyle : linkStyle
           }>
-            8.!Inputs
+            8. !Inputs
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/e9" style={({ isActive }) => 
+            isActive ? activeLinkStyle : linkStyle
+          }>
+            9. Puntuaciones
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/e10" style={({ isActive }) => 
+            isActive ? activeLinkStyle : linkStyle
+          }>
+            10. Cuestionario
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/e11" style={({ isActive }) => 
+            isActive ? activeLinkStyle : linkStyle
+          }>
+            11. Notas
           </NavLink>
         </li>
       </ul>

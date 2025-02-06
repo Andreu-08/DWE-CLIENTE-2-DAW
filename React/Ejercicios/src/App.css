@@ -1,13 +1,16 @@
+/* Importación de fuente Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 
+/* Aplicar fuente a todos los elementos */
 * {
-  font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .BarraHerramientas {
   background-color: grey;
 }
 
+/* Estilos base para botones */
 button {
   background-color: #ffffff;
   color: #333333;
@@ -24,16 +27,19 @@ button {
   transition: all 0.3s ease;
 }
 
+/* Efectos hover para botones */
 button:hover {
   background-color: #f5f5f5;
   border-color: #cccccc;
 }
 
+/* Estado activo de botones */
 button:active {
   background-color: #e0e0e0;
   transform: translateY(1px);
 }
 
+/* Estado deshabilitado de botones */
 button:disabled {
   background-color: #f0f0f0;
   color: #999999;
@@ -41,6 +47,7 @@ button:disabled {
   border-color: #e0e0e0;
 }
 
+/* Estilos base para inputs */
 input {
   background-color: #ffffff;
   color: #333333;
@@ -55,16 +62,49 @@ input {
   outline: none;
 }
 
+/* Efectos hover para inputs */
 input:hover {
   border-color: #cccccc;
 }
 
+/* Estado focus de inputs */
 input:focus {
   border-color: #808080;
   box-shadow: 0 0 0 2px rgba(128, 128, 128, 0.1);
 }
 
+/* Estilos para placeholder */
 input::placeholder {
   color: #999999;
   font-weight: 300;
+}
+
+/* Estilos base para textareas */
+textarea {
+  width: 100%;
+  max-width: 400px;
+  min-height: 100px;
+  padding: 12px;
+  margin: 8px 0;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 16px;
+  resize: vertical;
+  background-color: #f8f8f8;
+  transition: border-color 0.3s ease;
+}
+
+/* Estado focus de textareas */
+textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.2);
+}
+
+/* Estado deshabilitado de textareas */
+textarea:disabled {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+  opacity: 0.7;
 }
