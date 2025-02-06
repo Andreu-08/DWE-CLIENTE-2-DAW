@@ -32,6 +32,15 @@ Implementación de una galería de imágenes interactiva.
 ### 8. [Inputs](./src/ejercicios/e8-inputs.jsx)
 Manejo de inputs controlados en formularios React.
 
+### 9. [Puntuaciones](./src/ejercicios/e9-punjate.jsx)
+Manejo de dos botones de puntuaciones +1 y +3 
+
+### 10. [Cuestionario](./src/ejercicios/e10-cuestionario.jsx)
+cuestionario con que solo te deja completarlo si es la respuesta correcta
+
+### 10. [ToDo](./src/ejercicios/e11-notas/e11-notas.jsx)
+cuestionario con que solo te deja completarlo si es la respuesta correcta
+
 ## 🚀 Instalación
 
 ```bash
