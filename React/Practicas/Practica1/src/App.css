@@ -1,0 +1,188 @@
+/* App.css */
+
+/* 
+  Estilos generales para el cuerpo de la página.
+  Se define una fuente, se eliminan márgenes y se aplica un fondo suave.
+*/
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+/*
+  Contenedor principal de la aplicación.
+  Se centra el contenido y se define un ancho máximo.
+*/
+.App {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/*
+  Estilos para la sección de visualización de destinos.
+  Se utiliza un fondo blanco, bordes redondeados y una sombra suave.
+*/
+.destino-display {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/*
+  Estilos para los títulos dentro de la sección de destinos.
+  Se ajustan los márgenes para mantener una buena separación.
+*/
+.destino-display h2,
+.destino-display h3 {
+  margin: 0 0 10px;
+}
+
+/*
+  Estilos para la imagen del destino.
+  Se centra, se da un tamaño controlado y se redondean los bordes.
+*/
+.destino-display img {
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  width: 500px;
+  height:400px;
+}
+
+/*
+  Contenedor de los botones de navegación (Anterior y Siguiente).
+  Se distribuyen de forma horizontal con espacio entre ellos.
+*/
+.navegacion-destinos {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/*
+  Estilos para la sección del formulario de votación.
+  Se aplica un fondo blanco, relleno interno y sombra similar a la sección de destinos.
+*/
+.formulario-votacion {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/*
+  Se elimina el margen superior del título del formulario.
+*/
+.formulario-votacion h3 {
+  margin-top: 0;
+}
+
+/*
+  Cada grupo de campo del formulario tiene un margen inferior para separarlos.
+*/
+.formulario-votacion form div {
+  margin-bottom: 15px;
+}
+
+/*
+  Los labels se muestran en bloque y se destaca la información con negrita.
+*/
+.formulario-votacion label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/*
+  Estilos para los campos de entrada (inputs) y selectores.
+  Se define un ancho completo, padding y bordes suaves.
+*/
+.formulario-votacion input[type="text"],
+.formulario-votacion select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+/*
+  Contenedor para los botones del formulario (Enviar y Limpiar).
+  Se distribuyen horizontalmente con espacio entre ellos.
+*/
+.acciones-formulario {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*
+  Estilos para los botones, definiendo colores, padding y transición para efecto hover.
+*/
+.acciones-formulario button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007BFF;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/*
+  Botón "Limpiar" con un color distinto para diferenciarlo.
+*/
+.acciones-formulario button[type="button"]{
+  background-color: #6c757d;
+}
+
+/*
+  Cambio de color al pasar el cursor por encima de los botones, 
+  siempre y cuando no estén deshabilitados.
+*/
+.acciones-formulario button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/*
+  Estilo para los botones deshabilitados, dándoles un color gris y un cursor no permitido.
+*/
+.acciones-formulario button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/*
+  Estilos para los botones de navegación en la sección de visualización de destinos.
+  Estos estilos se aplican a los botones "Anterior" y "Siguiente".
+*/
+.navegacion-destinos button {
+  /* Padding para dar espacio interno y mejorar la legibilidad */
+  padding: 8px 16px;
+  /* Sin borde para un estilo más limpio */
+  border: none;
+  /* Bordes redondeados para un aspecto moderno */
+  border-radius: 4px;
+  /* Color de fondo (verde) para destacar los botones */
+  background-color: #28a745;
+  /* Color de texto blanco para un buen contraste */
+  color: #ffffff;
+  /* Cursor pointer para indicar que son interactivos */
+  cursor: pointer;
+  /* Transición suave para el cambio de color al hacer hover */
+  transition: background-color 0.3s ease;
+}
+
+/* Cambio de color al pasar el cursor por encima de los botones (cuando están habilitados) */
+.navegacion-destinos button:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+/* Estilo para los botones deshabilitados (cuando no hay destino anterior o siguiente) */
+.navegacion-destinos button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
