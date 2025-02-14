@@ -42,9 +42,18 @@ Repositorio con actividades y proyectos de la asignatura 'Desarrollo web en Ento
   - Rutas y navegación
   - [Ver README detallado](React/Ejercicios/README.md)
 
+### Prácticas
+- [Práctica 1: Introducción a React](React/Practicas/Practica1)
+  - Componentes funcionales
+  - Uso de hooks básicos
+  - Gestión de estados
+  - Props y eventos
+  - [Ver README detallado](React/Practicas/Practica1/README.md)
+
 ### Proyectos
 - [Tres en Raya](React/Proyectos/tresEnRalla)
   - Juego clásico de Tres en Raya
   - Implementado con React Hooks
   - Gestión de estado del juego
   - Detección de victoria
+

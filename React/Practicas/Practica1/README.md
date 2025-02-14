@@ -2,21 +2,6 @@
 
 Bienvenido al repositorio del _Proyecto de Votación de Destinos_. Este proyecto es una aplicación web construida con React y Vite, diseñada para simular el proceso de votación para elegir el destino de un viaje escolar de fin de curso.
 
----
-
-## Tabla de Contenidos
-
-- [Descripción](#descripción)
-- [Componentes](#componentes)
-  - [DestinoDisplay](#destinodeisplay)
-  - [FormularioVotacion](#formulariovotacion)
-- [Tecnologías Utilizadas](#tecnologías-utilizadas)
-- [Instalación y Ejecución](#instalación-y-ejecución)
-- [Capturas de Pantalla](#capturas-de-pantalla)
-- [Referencias](#referencias)
-
----
-
 ## Descripción
 
 El proyecto ofrece una experiencia interactiva en la que los usuarios pueden:
