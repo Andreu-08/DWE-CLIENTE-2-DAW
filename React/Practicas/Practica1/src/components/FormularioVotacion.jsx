@@ -1,142 +1,97 @@
-// src/components/FormularioVotacion.js
-
-// Importamos React y el hook useState para manejar el estado del componente.
-import React, { useState } from 'react';
-// Importamos la base de datos de destinos para usarlos en los selectores de preferencia.
+import { useState } from 'react';
 import { destinos } from '../destinos';
 
-function FormularioVotacion() {
-  // Declaramos el estado "formData" para almacenar los datos del formulario.
-  // Cada propiedad corresponde a un campo del formulario.
-  const [formData, setFormData] = useState({
+function FormularioVoto() {
+  const [datos, setDatos] = useState({
     nombre: '',
-    primerApellido: '',
-    segundoApellido: '',
+    apellido1: '',
+    apellido2: '',
     dni: '',
     telefono: '',
-    preferencia1: '',
-    preferencia2: '',
-    preferencia3: ''
+    pref1: '',
+    pref2: '',
+    pref3: ''
   });
 
-  // Función genérica para actualizar los campos de texto (nombre, apellidos, DNI).
-  const handleInputChange = (e) => {
+  const cambioInput = (e) => {
     const { name, value } = e.target;
-    // Actualizamos el estado copiando los valores actuales y modificando el campo correspondiente.
-    setFormData({
-      ...formData,
+    setDatos({
+      ...datos,
       [name]: value
     });
   };
 
-  // Función específica para el campo "teléfono" para restringir la entrada a números.
-  const handleTelefonoChange = (e) => {
-    const value = e.target.value;
-    // Se utiliza una expresión regular para permitir solo dígitos (0-9).
-    if (/^\d*$/.test(value)) {
-      // Si la entrada es válida, se actualiza el estado.
-      setFormData({
-        ...formData,
-        telefono: value
+  const cambioTelefono = (e) => {
+    const valor = e.target.value;
+    if (/^\d*$/.test(valor)) {
+      setDatos({
+        ...datos,
+        telefono: valor
       });
     } else {
-      // Si se ingresa un carácter no numérico, se muestra un mensaje de alerta.
-      alert('Solo se permiten números en el campo de teléfono.');
+      alert('Solo números en el teléfono');
     }
   };
 
-  // Función para manejar el cambio en los selectores de preferencia.
-  // Además, si se modifica una preferencia, se limpian las siguientes para evitar inconsistencias.
-  const handleSelectChange = (e) => {
+  const cambioSelect = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setDatos({
+      ...datos,
       [name]: value,
-      // Si se cambia la primera preferencia, se reinician la segunda y la tercera.
-      ...(name === 'preferencia1' && { preferencia2: '', preferencia3: '' }),
-      // Si se cambia la segunda preferencia, se reinicia la tercera.
-      ...(name === 'preferencia2' && { preferencia3: '' })
+      ...(name === 'pref1' && { pref2: '', pref3: '' }),
+      ...(name === 'pref2' && { pref3: '' })
     });
   };
 
-  // Función para manejar el envío del formulario.
-  const handleSubmit = (e) => {
-    e.preventDefault(); // Prevenir la recarga de la página.
-
-    // Validación de que todos los campos estén completos.
+  const enviar = (e) => {
+    e.preventDefault();
     if (
-      !formData.nombre ||
-      !formData.primerApellido ||
-      !formData.segundoApellido ||
-      !formData.dni ||
-      !formData.telefono ||
-      !formData.preferencia1 ||
-      !formData.preferencia2 ||
-      !formData.preferencia3
+      !datos.nombre ||
+      !datos.apellido1 ||
+      !datos.apellido2 ||
+      !datos.dni ||
+      !datos.telefono ||
+      !datos.pref1 ||
+      !datos.pref2 ||
+      !datos.pref3
     ) {
-      // Si falta algún campo, se muestra un mensaje de alerta y se detiene el envío.
-      alert('Por favor, completa todos los campos del formulario.');
+      alert('Completa todos los campos');
       return;
     }
-
-    // Si todos los campos están completos, se muestra un mensaje de confirmación.
-    alert('¡Tu voto ha sido enviado con éxito!');
-    
-    // Aquí se podría implementar la lógica para enviar los datos a un servidor o procesarlos de otra manera.
-
-    // Opcionalmente, se limpia el formulario después de enviar.
-    setFormData({
+    alert('Voto enviado exitosamente!');
+    setDatos({
       nombre: '',
-      primerApellido: '',
-      segundoApellido: '',
+      apellido1: '',
+      apellido2: '',
       dni: '',
       telefono: '',
-      preferencia1: '',
-      preferencia2: '',
-      preferencia3: ''
+      pref1: '',
+      pref2: '',
+      pref3: ''
     });
   };
 
-  // Función para limpiar el formulario al hacer clic en el botón "Limpiar".
-  const handleClear = () => {
-    setFormData({
+  const limpiar = () => {
+    setDatos({
       nombre: '',
-      primerApellido: '',
-      segundoApellido: '',
+      apellido1: '',
+      apellido2: '',
       dni: '',
       telefono: '',
-      preferencia1: '',
-      preferencia2: '',
-      preferencia3: ''
+      pref1: '',
+      pref2: '',
+      pref3: ''
     });
   };
 
-  // Filtrado de opciones para el primer selector: se muestran todos los destinos.
-  const opcionesPreferencia1 = destinos;
-
-  // Filtrado para el segundo selector: se excluye el destino seleccionado en el primer selector.
-  const opcionesPreferencia2 = destinos.filter(
-    (destino) => destino.nombre !== formData.preferencia1
-  );
-
-  // Filtrado para el tercer selector: se excluyen los destinos seleccionados en el primer y segundo selector.
-  const opcionesPreferencia3 = destinos.filter(
-    (destino) =>
-      destino.nombre !== formData.preferencia1 &&
-      destino.nombre !== formData.preferencia2
-  );
+  const opciones1 = destinos;
+  const opciones2 = destinos.filter(d => d.nombre !== datos.pref1);
+  const opciones3 = destinos.filter(d => d.nombre !== datos.pref1 && d.nombre !== datos.pref2);
 
   return (
     <div className="formulario-votacion">
-      {/* Título del formulario */}
       <h3>Formulario para emitir tu voto</h3>
-      {/* El formulario se encarga de capturar los datos del usuario */}
-      <form onSubmit={handleSubmit}>
-        {/*
-          Campo de texto para el nombre.
-          El atributo "value" se asocia con el estado para mostrar el valor actual,
-          y "onChange" actualiza el estado conforme el usuario escribe.
-        */}
+      <form onSubmit={enviar}>
         <div>
           <label htmlFor="nombre">Nombre:</label>
           <input
@@ -144,41 +99,32 @@ function FormularioVotacion() {
             id="nombre"
             name="nombre"
             placeholder="Ingresa tu nombre"
-            value={formData.nombre}
-            onChange={handleInputChange}
+            value={datos.nombre}
+            onChange={cambioInput}
           />
         </div>
-        {/*
-          Campo para el primer apellido.
-        */}
         <div>
-          <label htmlFor="primerApellido">Primer Apellido:</label>
+          <label htmlFor="apellido1">Primer Apellido:</label>
           <input
             type="text"
-            id="primerApellido"
-            name="primerApellido"
+            id="apellido1"
+            name="apellido1"
             placeholder="Ingresa tu primer apellido"
-            value={formData.primerApellido}
-            onChange={handleInputChange}
+            value={datos.apellido1}
+            onChange={cambioInput}
           />
         </div>
-        {/*
-          Campo para el segundo apellido.
-        */}
         <div>
-          <label htmlFor="segundoApellido">Segundo Apellido:</label>
+          <label htmlFor="apellido2">Segundo Apellido:</label>
           <input
             type="text"
-            id="segundoApellido"
-            name="segundoApellido"
+            id="apellido2"
+            name="apellido2"
             placeholder="Ingresa tu segundo apellido"
-            value={formData.segundoApellido}
-            onChange={handleInputChange}
+            value={datos.apellido2}
+            onChange={cambioInput}
           />
         </div>
-        {/*
-          Campo para el DNI.
-        */}
         <div>
           <label htmlFor="dni">DNI:</label>
           <input
@@ -186,14 +132,10 @@ function FormularioVotacion() {
             id="dni"
             name="dni"
             placeholder="Ingresa tu DNI"
-            value={formData.dni}
-            onChange={handleInputChange}
+            value={datos.dni}
+            onChange={cambioInput}
           />
         </div>
-        {/*
-          Campo para el teléfono.
-          Se utiliza un manejador de cambio específico para restringir la entrada a números.
-        */}
         <div>
           <label htmlFor="telefono">Teléfono:</label>
           <input
@@ -201,89 +143,56 @@ function FormularioVotacion() {
             id="telefono"
             name="telefono"
             placeholder="Ingresa tu teléfono"
-            value={formData.telefono}
-            onChange={handleTelefonoChange}
+            value={datos.telefono}
+            onChange={cambioTelefono}
           />
         </div>
-        {/*
-          Selector para la primera preferencia.
-          Este selector está siempre activo y muestra todas las opciones disponibles.
-        */}
         <div>
-          <label htmlFor="preferencia1">Primera Preferencia:</label>
-          <select
-            id="preferencia1"
-            name="preferencia1"
-            value={formData.preferencia1}
-            onChange={handleSelectChange}
-          >
-            <option value="">Seleccione un destino</option>
-            {opcionesPreferencia1.map((destino, index) => (
-              <option key={index} value={destino.nombre}>
-                {destino.nombre}
-              </option>
+          <label htmlFor="pref1">Primera Preferencia:</label>
+          <select id="pref1" name="pref1" value={datos.pref1} onChange={cambioSelect}>
+            <option value="">Elige un destino</option>
+            {opciones1.map((d, i) => (
+              <option key={i} value={d.nombre}>{d.nombre}</option>
             ))}
           </select>
         </div>
-        {/*
-          Selector para la segunda preferencia.
-          Se habilita solo si se ha seleccionado la primera preferencia,
-          y no muestra el destino ya seleccionado en el primer selector.
-        */}
         <div>
-          <label htmlFor="preferencia2">Segunda Preferencia:</label>
-          <select
-            id="preferencia2"
-            name="preferencia2"
-            value={formData.preferencia2}
-            onChange={handleSelectChange}
-            disabled={!formData.preferencia1} // Deshabilitado si no hay selección en el primer selector.
+          <label htmlFor="pref2">Segunda Preferencia:</label>
+          <select 
+            id="pref2" 
+            name="pref2" 
+            value={datos.pref2} 
+            onChange={cambioSelect} 
+            disabled={!datos.pref1}
           >
-            <option value="">Seleccione un destino</option>
-            {opcionesPreferencia2.map((destino, index) => (
-              <option key={index} value={destino.nombre}>
-                {destino.nombre}
-              </option>
+            <option value="">Elige un destino</option>
+            {opciones2.map((d, i) => (
+              <option key={i} value={d.nombre}>{d.nombre}</option>
             ))}
           </select>
         </div>
-        {/*
-          Selector para la tercera preferencia.
-          Se habilita solo si se ha seleccionado la segunda preferencia,
-          y no muestra los destinos seleccionados en los selectores anteriores.
-        */}
         <div>
-          <label htmlFor="preferencia3">Tercera Preferencia:</label>
-          <select
-            id="preferencia3"
-            name="preferencia3"
-            value={formData.preferencia3}
-            onChange={handleSelectChange}
-            disabled={!formData.preferencia2} // Deshabilitado si no hay selección en el segundo selector.
+          <label htmlFor="pref3">Tercera Preferencia:</label>
+          <select 
+            id="pref3" 
+            name="pref3" 
+            value={datos.pref3} 
+            onChange={cambioSelect} 
+            disabled={!datos.pref2}
           >
-            <option value="">Seleccione un destino</option>
-            {opcionesPreferencia3.map((destino, index) => (
-              <option key={index} value={destino.nombre}>
-                {destino.nombre}
-              </option>
+            <option value="">Elige un destino</option>
+            {opciones3.map((d, i) => (
+              <option key={i} value={d.nombre}>{d.nombre}</option>
             ))}
           </select>
         </div>
-        {/*
-          Botones de acción:
-          - "Enviar" envía el formulario tras validar que todos los campos estén completos.
-          - "Limpiar" restablece el formulario, borrando los datos introducidos.
-        */}
         <div className="acciones-formulario">
           <button type="submit">Enviar</button>
-          <button type="button" onClick={handleClear}>
-            Limpiar
-          </button>
+          <button type="button" onClick={limpiar}>Limpiar</button>
         </div>
       </form>
     </div>
   );
 }
 
-// Exportamos el componente para poder utilizarlo en App.js.
-export default FormularioVotacion;
+export default FormularioVoto;

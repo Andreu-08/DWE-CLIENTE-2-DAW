@@ -1,11 +1,3 @@
-// src/destinos.js
-// --------------------------------------------------------------------------------
-// Este archivo contiene la "base de datos" de destinos para la votación del viaje.
-// Se crea un array de objetos, donde cada objeto representa un destino con su respectiva
-// información: nombre, descripción, foto y precio.
-// --------------------------------------------------------------------------------
-
-// Exportamos el array "destinos" para poder importarlo en otros componentes de la aplicación.
 export const destinos = [
     {
       // Nombre del destino
